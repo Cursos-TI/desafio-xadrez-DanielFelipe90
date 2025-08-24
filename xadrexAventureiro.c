@@ -8,9 +8,11 @@ int main()
     // Movimento do cavalo: 2 casas para baixo e 1 esquerda usando loops aninhados(FOR e WHILE)
     printf("\nMovimento do Cavalo:\n");
     int cavalo = 1;
+    // Loop externo horizontal para 1 casa para esquerda 
     for (cavalo = 1; cavalo <= 1; cavalo++)
     {
         int i = 1;
+         // Loop interno vertical para 2 casas para baixo       
         while (i <= 2)
         {
             printf("Baixo.\n");
