@@ -1,18 +1,47 @@
 #include <stdio.h>
 
+void moverCavalo()
+{
+    printf("\nMovimento do Cavalo:\n");
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            // Condição para simular o movimento em L
+            if (i == 2 && j == 1)
+            {
+                printf("Cima.\nCima.\nDireita.\n");
+                break; // Sai do loop interno após o movimento
+            }
+            else
+            {
+                continue; // Ignora outras combinações
+            }
+        }
+        if (i == 2)
+            break; // Sai do loop externo após o movimento
+    }
+}
+
 // Movimento da Rainha com recursividade
 void moverRainha(int casas)
 {
-    if (casas > 0)
+    // 8 casas para a esquerda
+    printf("\nMovimento da Rainha:\n");
+    for (int i = 0; i < 8; i++)
     {
-        printf("Esquerda.\n");
-        moverRainha(casas - 1);
+        if (casas > 0)
+        {
+            printf("Esquerda.\n");
+        }
     }
 }
 
 // Movimento do Bispo com recursividade e loops aninhados(FOR)
 void moverBispo(int casas)
 {
+    // 5 casas na diagonal para cima e à direita
+    printf("\nMovimento do Bispo:\n");
     // Loop externo para a coluna - vertical
     for (int cima = 0; cima < casas; cima++)
     {
@@ -30,10 +59,14 @@ void moverBispo(int casas)
 // Movimento da torre recursividade
 void moverTorre(int casas)
 {
-    if (casas > 0)
+    // 5 casas para a direita
+    printf("\nMovimento da Torre:\n");
+    for (int i = 0; i < 5; i++)
     {
-        printf("Direita.\n");
-        moverTorre(casas - 1);
+        if (casas > 0)
+        {
+            printf("Direita.\n");
+        }
     }
 }
 
@@ -41,34 +74,10 @@ int main()
 {
 
     printf("*** Xadrez - Desafio Mestre ***\n");
-
-    // Movimento do cavalo: 2 casas para cima e 1 para direita usando loops aninhados (FOR)
-    printf("\nMovimento do Cavalo:\n");
-    // Loop externo horizontal para 1 casa para direita
-    for (int i = 0; i < 1; i++)
-    {
-        // Loop interno vertical para 2 casas para cima
-        for (int j = 0; j < 2; j++)
-        {
-            printf("Cima\n");
-            continue;
-        }
-        printf("Direita\n");
-        break;
-    }
-
-    printf("\nMovimento da Rainha:\n");
-    // 8 casas para a esquerda
+    moverCavalo();
     moverRainha(8);
-
-    printf("\nMovimento do Bispo:\n");
-    // 5 casas na diagonal para cima e à direita
     moverBispo(5);
-
-    printf("\nMovimento da Torre:\n");
-    // 5 casas para a direita
     moverTorre(5);
-
     printf("\n");
 
     return 0;
