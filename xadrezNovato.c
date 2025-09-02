@@ -33,7 +33,7 @@ int main()
         b++;
     } while (b < rainha);
 
-    print("\n");
+    printf("\n");
 
     return 0;
 }
