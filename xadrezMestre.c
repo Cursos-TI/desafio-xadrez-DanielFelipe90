@@ -13,10 +13,10 @@ void moverRainha(int casas)
 // Movimento do Bispo com recursividade e loops aninhados(FOR)
 void moverBispo(int casas)
 {
-    // Loop externo para a linha vertical
+    // Loop externo para a coluna - vertical
     for (int cima = 0; cima < casas; cima++)
     {
-        // Loop interno para a linha horizontal
+        // Loop interno para a linha - horizontal
         for (int direita = 0; direita < casas; direita++)
         {
             if (cima == direita)
@@ -45,10 +45,10 @@ int main()
     // Movimento do cavalo: 2 casas para cima e 1 para direita usando loops aninhados (FOR)
     printf("\nMovimento do Cavalo:\n");
     // Loop externo horizontal para 1 casa para direita
-    for (int j = 0; j < 1; j++)
+    for (int i = 0; i < 1; i++)
     {
         // Loop interno vertical para 2 casas para cima
-        for (int i = 0; i < 2; i++)
+        for (int j = 0; j < 2; j++)
         {
             printf("Cima\n");
             continue;
