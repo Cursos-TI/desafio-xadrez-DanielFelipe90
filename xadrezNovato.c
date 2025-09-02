@@ -3,7 +3,7 @@
 int main()
 {
 
-    printf("*** Desafio Novato ***\n");
+    printf("*** Xadrez - Desafio Novato ***\n");
 
     // Movimento da Torre: 5 casas para a direita (usando FOR)
     int torre = 5;
@@ -32,6 +32,8 @@ int main()
         printf("Esquerda\n");
         b++;
     } while (b < rainha);
+
+    print("\n");
 
     return 0;
 }

@@ -40,7 +40,7 @@ void moverTorre(int casas)
 int main()
 {
 
-    printf("*** Desafio Mestre ***\n");
+    printf("*** Xadrez - Desafio Mestre ***\n");
 
     // Movimento do cavalo: 2 casas para cima e 1 para direita usando loops aninhados (FOR)
     printf("\nMovimento do Cavalo:\n");
@@ -68,6 +68,8 @@ int main()
     printf("\nMovimento da Torre:\n");
     // 5 casas para a direita
     moverTorre(5);
+
+    printf("\n");
 
     return 0;
 }

@@ -3,7 +3,7 @@
 int main()
 {
 
-    printf("*** Desafio Aventureiro ***\n");
+    printf("*** Xadrez - Desafio Aventureiro ***\n");
 
     // Movimento do cavalo: 2 casas para baixo e 1 esquerda usando loops aninhados(FOR e WHILE)
     printf("\nMovimento do Cavalo:\n");
@@ -48,6 +48,8 @@ int main()
         printf("Esquerda\n");
         b++;
     } while (b < rainha);
+
+    printf("\n");
 
     return 0;
 }
